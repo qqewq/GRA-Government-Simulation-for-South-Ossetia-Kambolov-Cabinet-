@@ -1,0 +1,255 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+\geometry{margin=1in}
+\onehalfspacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={GRA Government Simulation for South Ossetia (Kambolov Cabinet)},
+    pdfauthor={AAA AAA},
+    pdfsubject={AI governance simulation, hierarchical stability, GRA framework},
+    pdfkeywords={GRA, AI, governance simulation, South Ossetia, hierarchical stability, swarm agents}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{GRA Government Simulation}
+\fancyhead[R]{South Ossetia / Kambolov Cabinet}
+\fancyfoot[C]{\thepage}
+
+\title{\textbf{GRA Government Simulation for South Ossetia (Kambolov Cabinet)}\\
+\large A Hierarchical Stability and Swarm-AI Research Framework}
+\author{AAA AAA}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper describes a research-oriented AI simulation framework for modeling a hypothetical governance cabinet for South Ossetia within the broader GRA ecosystem. The system combines hierarchical stability modeling, domain-specific agents, scenario simulation, swarm-style coordination, and policy evaluation. Its purpose is strictly analytical and experimental: it is not a real-world command system, not an autonomous political controller, and not a substitute for human governance. The framework is intended to support structured reasoning about socio-economic dynamics, state resilience, and multi-agent decision synthesis under uncertainty.
+\end{abstract}
+
+\section{Introduction}
+
+The GRA Government Simulation project is designed as a modular analytical environment for exploring governance scenarios in a constrained and highly dependent political context. The system models a hypothetical cabinet associated with South Ossetia and uses the name ``Kambolov Cabinet'' as a symbolic label for the simulation target, not as an operational political claim.
+
+The project is inspired by the broader GRA family of repositories, including hierarchical stability, resonance, nullification, swarm orchestration, and ASI metric-space ideas. In this framework, governance is treated as a multi-agent optimization and stability problem rather than a central-authority control loop.
+
+\section{Research Scope and Safety Boundary}
+
+This repository is explicitly limited to simulation and research use. It does not issue real political instructions, it does not connect to any state decision pipeline, and it does not represent a real government architecture.
+
+The safety boundary is simple:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item the system produces scenarios, not orders;
+    \item the system evaluates policy options, not real mandates;
+    \item the system aggregates agent outputs, but does not claim legitimacy;
+    \item the system is for analysis, stress-testing, and conceptual exploration only.
+\end{itemize}
+
+\section{Conceptual Foundation}
+
+The architecture follows five GRA-inspired principles:
+
+\subsection{Hierarchical Stability}
+A policy or scenario should be evaluated by its effect on layered stability: institutional, economic, social, demographic, and informational. The output is not a single number only; it is a structured stability profile.
+
+\subsection{Swarm Coordination}
+Multiple specialized agents generate independent assessments. Their outputs are later aggregated and reconciled. This approach reduces overfitting to a single perspective and supports richer scenario coverage.
+
+\subsection{Subjective Perspective Switching}
+Different stakeholders may weight the same state differently. For example, government, population, and external actors may value budget stability, living standards, or strategic alignment in different proportions.
+
+\subsection{Metric-Space Scenario Comparison}
+Scenarios can be compared by a conceptual distance metric. This allows the system to reason about similarity, divergence, and trajectory shifts across policy sets and time horizons.
+
+\subsection{Nullification of Instability}
+If a policy proposal creates severe conflict across layers, the framework should identify it as unstable and reduce its priority. This is a conceptual nullification layer, not a literal political mechanism.
+
+\section{System Architecture}
+
+The system is organized into the following modules:
+
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Core Stability Layer}  
+    Computes stability scores from policy vectors and state variables.
+
+    \item \textbf{Cabinet Orchestrator}  
+    Coordinates all domain agents and merges their recommendations.
+
+    \item \textbf{Domain Agents}  
+    Specialized agents for economy, demography, infrastructure, social stability, security, and media.
+
+    \item \textbf{LLM Swarm Layer}  
+    Optional natural-language reasoning layer for explanation generation and alternative proposal synthesis.
+
+    \item \textbf{Scenario Engine}  
+    Simulates state evolution over discrete time steps.
+
+    \item \textbf{Report Generator}  
+    Produces technical and executive summaries for human review.
+\end{enumerate}
+
+\section{State Model}
+
+The simulated state of South Ossetia is represented by a simplified multi-field model:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item economy: GDP index, unemployment, budget dependency;
+    \item demography: population, migration, age structure;
+    \item infrastructure: energy access, road quality, housing index;
+    \item social stability: protest index, trust index;
+    \item security: internal risk and external risk indicators.
+\end{itemize}
+
+This abstraction is intentionally coarse. Its purpose is to support scenario logic, not statistical forecasting with official precision.
+
+\section{Agent Design}
+
+Each agent in the cabinet follows a common interface:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item evaluate the current state;
+    \item propose domain-specific actions;
+    \item assign weights to competing goals;
+    \item optionally consult an LLM for textual reasoning support;
+    \item return a structured report for aggregation.
+\end{itemize}
+
+Domain agents are designed to disagree when appropriate. For example, an economic improvement proposal may raise short-term pressure on social stability or budget dependency. The orchestrator then resolves these tensions through the hierarchical stability core.
+
+\section{Policy Aggregation}
+
+A policy vector is treated as a weighted object over multiple domains. Given a state $S$ and a set of policy actions $A = \{a_1, a_2, \ldots, a_n\}$, the framework computes a stability response:
+
+\[
+\mathrm{Stability}(S, A) = \sum_{i=1}^{n} w_i \cdot f_i(S, a_i)
+\]
+
+where $w_i$ are policy weights and $f_i$ are domain-specific response functions. The resulting value is then decomposed into sub-scores for interpretability.
+
+In practice, the framework aims to answer questions such as:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item Which actions improve long-term resilience?
+    \item Which actions create contradictory pressure across domains?
+    \item Which scenario is closer to institutional stability?
+    \item Which policy set is robust under uncertainty?
+\end{itemize}
+
+\section{Scenario Simulation}
+
+The scenario engine advances the state across time steps. Each step applies policy effects, noise, and structural constraints. This is useful for 1-year, 3-year, or 5-year planning horizons.
+
+The simulator supports:
+\begin{itemize}[leftmargin=1.5em]
+    \item deterministic updates for reproducible tests;
+    \item stochastic perturbations for robustness checks;
+    \item multi-step rollouts for trend inspection;
+    \item scenario comparison across runs.
+\end{itemize}
+
+\section{LLM Integration}
+
+Large language models are treated as reasoning assistants, not authorities. Their role is to:
+\begin{itemize}[leftmargin=1.5em]
+    \item explain agent outputs;
+    \item summarize conflicting recommendations;
+    \item generate alternative policy framings;
+    \item translate technical results into human-readable language.
+\end{itemize}
+
+The architecture keeps the LLM interface abstract so that different providers can be used interchangeably.
+
+\section{Expected Outputs}
+
+The system is designed to produce the following outputs:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item executive summary for a hypothetical leader;
+    \item technical state report;
+    \item stability matrix across domains;
+    \item action ranking by expected impact;
+    \item scenario trajectory for the chosen horizon;
+    \item conflict explanation between agents;
+    \item comparative distance between alternative plans.
+\end{itemize}
+
+\section{Limitations}
+
+The model has important limitations:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item it uses simplified state variables;
+    \item it cannot replace real socio-economic data collection;
+    \item it does not capture all legal or institutional constraints;
+    \item it cannot infer political legitimacy;
+    \item it should not be used as an operational decision system.
+\end{itemize}
+
+These limitations are not defects; they are deliberate boundaries that keep the project within research and simulation scope.
+
+\section{Implementation Notes}
+
+The implementation is intended to remain lightweight and readable. Preferred properties include:
+\begin{itemize}[leftmargin=1.5em]
+    \item Python 3.11+;
+    \item type annotations;
+    \item modular package layout;
+    \item configuration via YAML or TOML;
+    \item easy extension for additional GRA modules.
+\end{itemize}
+
+A minimal repository should include:
+\begin{itemize}[leftmargin=1.5em]
+    \item core stability logic;
+    \item agent base classes;
+    \item scenario state model;
+    \item simulation step engine;
+    \item reporting layer;
+    \item CLI entrypoint.
+\end{itemize}
+
+\section{Conclusion}
+
+GRA Government Simulation for South Ossetia is a conceptual AI governance laboratory. It transforms governance into a structured multi-agent analysis problem with hierarchical stability, perspective switching, and scenario simulation. Its value lies in helping the researcher explore how different policy ideas interact under uncertainty, while keeping a strict boundary between simulation and real political authority.
+
+\section*{Russian Summary}
+
+Этот проект представляет собой исследовательскую симуляцию «кабинета ИИ» для анализа сценариев управления Южной Осетией. Он использует принципы GRA: иерархическая устойчивость, swarm-агенты, переключение перспектив, метрики расстояния между сценариями и подавление нестабильных политик. Проект \textbf{не} является реальным инструментом управления и предназначен только для моделирования, анализа и экспериментов.
+
+\begin{thebibliography}{9}
+
+\bibitem{gra}
+GRA Ecosystem Repositories. Internal conceptual architecture and research line. Accessed via project documentation.
+
+\bibitem{multiagent}
+Multi-agent decision systems and stability analysis in constrained environments. Research concept underlying the framework.
+
+\bibitem{simulation}
+Scenario simulation methods for socio-political analysis. Conceptual basis for the state transition engine.
+
+\end{thebibliography}
+
+\end{document}
