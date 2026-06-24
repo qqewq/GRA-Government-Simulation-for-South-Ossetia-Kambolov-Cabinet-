@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "gra-government-simulation-south-ossetia"
+version = "0.1.0"
+description = "AI-based Governance Simulation Cabinet for South Ossetia (Kambolov ecosystem) – research only"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "GRA Research", email = "research@example.com"}
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Sociology :: Political Simulation",
+]
+dependencies = []
+[project.optional-dependencies]
+yaml = ["pyyaml>=6.0"]
+
+[project.scripts]
+gra-gov = "gra_government.cli.main:main_entry"
+
+[tool.setuptools.packages.find]
+where = ["."]

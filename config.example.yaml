@@ -1,0 +1,24 @@
+# Example configuration for GRA Government Simulation
+# Copy this file to config.yaml and adjust values.
+
+# LLM provider settings (abstract, any provider can be plugged)
+llm:
+  provider: "dummy"            # options: dummy, openai, deepseek, local
+  endpoint: ""                 # API endpoint if needed
+  api_key_env: "LLM_API_KEY"   # environment variable for the key
+  model: "gpt-4"               # model name
+  temperature: 0.7
+  max_tokens: 1024
+
+# Data sources (not used in this initial version, placeholder)
+data:
+  sources: []
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+
+# Scenario defaults
+scenario:
+  time_horizon_steps: 12      # number of simulation steps (e.g., months)
+  initial_state: "default"    # identifier for initial state
